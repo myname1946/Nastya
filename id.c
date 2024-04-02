@@ -5,6 +5,7 @@
 #include <unistd.h>
 //Главная функция программы
 int main() {
+//Обьявление переменных
 	uid_t userid;
 	gid_t groupid;
 //Системный вызов getuid()
