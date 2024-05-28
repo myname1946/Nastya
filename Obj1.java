@@ -19,7 +19,7 @@ class Obj1 {
                 bmw.kpass = 2;
                 nissan.type = "Минивэн";
                 ford.type = "Седан";
-                bmw.type = "Каюриолет";
+                bmw.type = "Кабриолет";
                 nissan.vfuel = 50;
                 ford.vfuel = 40;
                 bmw.vfuel = 20;
@@ -31,6 +31,18 @@ class Obj1 {
                 System.out.println("Емкость топливного бака: " + nissan.vfuel);
                 System.out.println("Тип кузова: " + nissan.type);
                 nissan.range();
+		System.out.println("Информация рб автомобилях \"Форд\"");
+                System.out.println("Колличество пассажиров: " + ford.kpass);
+                System.out.println("Емкость топливного бака: " + ford.vfuel);
+                System.out.println("Тип кузова: " + ford.type);
+                ford.range();
+		System.out.println("Информация рб автомобилях \"БМВ\"");
+                System.out.println("Колличество пассажиров: " + bmw.kpass);
+                System.out.println("Емкость топливного бака: " + bmw.vfuel);
+                System.out.println("Тип кузова: " + bmw.type);
+                bmw.range();
+
+
         }
 }
 
