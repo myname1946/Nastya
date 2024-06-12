@@ -18,6 +18,16 @@ abstract class Product {
     public abstract double calculateAmount(int numberOfPies);
 }
 
+class Persons extends Product {
+    public Persons() {
+        super("Персоны", 6);
+    }
+    
+    public double calculateAmount(int numberOfPies) {
+    return getWeight() * numberOfPies;
+    }
+}
+
 class Eggs extends Product {
     public Eggs() {
         super("Яйца", 100);
@@ -70,12 +80,19 @@ public class Products {
         Product flour = new Flour();
         Product sugar = new Sugar();
         Product cherry = new Cherry();
+        Product persons = new Persons();
 
-        System.out.println("Ингредиенты для пирога с вишней:");
+        double totalEggs = eggs.calculateAmount(numberOfPies);
+        double totalFlour = flour.calculateAmount(numberOfPies);
+        double totalSugar = sugar.calculateAmount(numberOfPies);
+        double totalCherry = cherry.calculateAmount(numberOfPies);
+        double totalPersons = persons.calculateAmount(numberOfPies);
 
-        System.out.println("Яйца: " + eggs.calculateAmount(numberOfPies) + " грамм");
-        System.out.println("Мука: " + flour.calculateAmount(numberOfPies) + " грамм");
-        System.out.println("Сахар: " + sugar.calculateAmount(numberOfPies) + " грамм");
-        System.out.println("Вишня: " + cherry.calculateAmount(numberOfPies) + " грамм");
+        System.out.println("Необходимые ингредиенты для " + numberOfPies + " пирога:");
+        System.out.println("Яйца: " + totalEggs + " г");
+        System.out.println("Мука: " + totalFlour + " г");
+        System.out.println("Сахар: " + totalSugar + " г");
+        System.out.println("Вишня: " + totalCherry + " г");
+        System.out.println("Необходимое количество персон: " + totalPersons);
     }
 }
